@@ -3429,13 +3429,13 @@ input[type="button"].btn-block {
 .relative {
   position: relative; }
 
-.absolute-center, .modal-dialog {
+.absolute-center, .box-left .menu-translate ul, .modal-dialog {
   transform: translate(-50%, -50%) !important;
   top: 50%;
   left: 50%;
   position: absolute; }
 
-.overlay, .box-right .cities li a {
+.overlay, .box-left .menu-translate, .box-right .cities li a {
   top: 0;
   bottom: 0;
   right: 0;
@@ -3452,6 +3452,40 @@ body {
   min-height: 100vh;
   border-right: 2px solid #fff;
   overflow: hidden; }
+  .box-left .words-icon {
+    z-index: 1000;
+    top: 15px; }
+  .box-left .menu-translate {
+    background-color: #130377;
+    z-index: 100;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out; }
+    .box-left .menu-translate.active {
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0); }
+    .box-left .menu-translate ul {
+      font-size: 25px;
+      line-height: 4; }
+      .box-left .menu-translate ul a {
+        color: white; }
+    .box-left .menu-translate svg {
+      top: 25px;
+      right: 20px;
+      cursor: pointer; }
+      .box-left .menu-translate svg:hover {
+        fill: white; }
+        .box-left .menu-translate svg:hover line {
+          stroke: #130377; }
+        .box-left .menu-translate svg:hover circle {
+          fill: white; }
   .box-left .menu {
     padding-top: 14px;
     z-index: 1; }
@@ -3593,7 +3627,7 @@ body {
       line-height: 1.5; }
 
 .modal-sharing .modal-body svg {
-  width: 100px;
-  margin: 40px 20px 0px; }
+  width: 90px;
+  margin: 40px 20px; }
 
 /*# sourceMappingURL=main.css.map */

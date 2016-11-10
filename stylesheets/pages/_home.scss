@@ -8,6 +8,51 @@ body {
   min-height: 100vh;
   border-right: 2px solid #fff;
   overflow: hidden;
+  .words-icon {
+  	z-index: 1000;
+    top: 15px;
+  }
+  .menu-translate {
+  	@extend .overlay;
+  	background-color: $brand-primary;
+  	z-index: 100;
+  	-webkit-transform: translateX(-100%);
+  	-moz-transform: translateX(-100%);
+  	-ms-transform: translateX(-100%);
+  	transform: translateX(-100%);
+  	-webkit-transition: all .25s ease-in-out;
+  	-moz-transition: all .25s ease-in-out;
+  	-ms-transition: all .25s ease-in-out;
+  	transition: all .25s ease-in-out;
+  	&.active {
+  		-webkit-transform: translateX(-0);
+	  	-moz-transform: translateX(-0);
+	  	-ms-transform: translateX(-0);
+	  	transform: translateX(-0);
+  	}
+  	ul {
+	  	font-size: 25px;
+	    line-height: 4;
+	    @extend .absolute-center;
+	    a {
+	    	color: white;
+	    }
+  	}
+  	svg {
+	    top: 25px;
+	    right: 20px;
+	    cursor: pointer;
+	    &:hover {
+	    	fill: white;
+	    	line {
+	    		stroke: $brand-primary;
+	    	}
+	    	circle {
+	    		fill: white;
+	    	}
+	    }
+  	}
+  }
   .menu {
   	padding-top: 14px;
   	z-index: 1;
@@ -190,7 +235,7 @@ body {
 }
 .modal-sharing {
 	.modal-body svg {
-		width: 100px;
-    margin: 40px 20px 0px;
+		width: 90px;
+    margin: 40px 20px;
 	}
 }
