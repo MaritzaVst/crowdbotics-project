@@ -20,8 +20,34 @@ body {
   min-height: 100vh;
   border-right: 2px solid #fff;
   overflow: hidden;
-  svg {
-  	fill: white;
+  .menu {
+  	padding-top: 14px;
+  	z-index: 1;
+  	ul {
+  		padding-top: 10px;
+  		li {
+  			position: relative;
+  			transition: all 0.5s ease;
+	  		a {
+	  			top: 0;
+	  			bottom: 0;
+	  			right: 0;
+	  			left: 0;
+	  			position: absolute;
+	  		}
+	  		&:hover {
+	  			circle {
+	  				fill: #ffffff;
+	  			}
+	  			line, path, polyline {
+	  				stroke: #130377;
+	  			}
+	  		}
+	  	}
+  	}
+  }
+  .world {
+  	top: 0px;
     opacity: 0.2;
   }
   h1 {
@@ -33,5 +59,10 @@ body {
     font-size: 40px;
     font-weight: bold;
     line-height: 1.4;
+  }
+  .icon {
+  	bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

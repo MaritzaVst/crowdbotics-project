@@ -3647,8 +3647,26 @@ body {
   min-height: 100vh;
   border-right: 2px solid #fff;
   overflow: hidden; }
-  .box-left svg {
-    fill: white;
+  .box-left .menu {
+    padding-top: 14px;
+    z-index: 1; }
+    .box-left .menu ul {
+      padding-top: 10px; }
+      .box-left .menu ul li {
+        position: relative;
+        transition: all 0.5s ease; }
+        .box-left .menu ul li a {
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          position: absolute; }
+        .box-left .menu ul li:hover circle {
+          fill: #ffffff; }
+        .box-left .menu ul li:hover line, .box-left .menu ul li:hover path, .box-left .menu ul li:hover polyline {
+          stroke: #130377; }
+  .box-left .world {
+    top: 0px;
     opacity: 0.2; }
   .box-left h1 {
     color: white;
@@ -3659,5 +3677,9 @@ body {
     font-size: 40px;
     font-weight: bold;
     line-height: 1.4; }
+  .box-left .icon {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); }
 
 /*# sourceMappingURL=main.css.map */
