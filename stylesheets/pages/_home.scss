@@ -1,21 +1,8 @@
-/*utilities*/
-.absolute {
-	position: absolute;
-}
-.fixed {
-	position: fixed;
-}
-.relative {
-	position: relative;
-}
-
-/**/
-
 * {
 	font-family: "Lato";
 }
 body {
-	background-color: #130377;
+	background-color: $brand-primary;
 }
 .box-left {
   min-height: 100vh;
@@ -41,7 +28,7 @@ body {
 	  				fill: #ffffff;
 	  			}
 	  			line, path, polyline {
-	  				stroke: #130377;
+	  				stroke: $brand-primary;
 	  			}
 	  		}
 	  	}
@@ -84,7 +71,7 @@ body {
 	form {
 		border-bottom: 2px solid #fff;
 		z-index: 1000;
-		background-color: #130377;
+		background-color: $brand-primary;
 		input {
 			height: 90px;
 			background-image: url("../images/lupa.svg");
@@ -108,7 +95,7 @@ body {
 			border-bottom: 2px solid white;
 			color: white;
 			padding: 20px;
-			transition: all .2s ease-in-out;
+			transition: all .3s ease-in-out;
 			overflow: hidden;
 			&:nth-child(2n-1) {
 				border-right: 1px solid white;
@@ -147,11 +134,50 @@ body {
   		}
 			&:hover {
 				background-color: #ffffff;
-				color: #130377;
+				color: $brand-primary;
 				svg {
-		    	fill: #130377;
+		    	fill: $brand-primary;
 		    }
 			}
+		}
+	}
+}
+.modal-dialog {
+	@extend .absolute-center;
+	width: 750px;
+	color: white;
+	.modal-content {
+		padding: 30px 60px;
+		background-color: $brand-primary;
+		.modal-header {
+			padding-left: 0px;
+			h4 {
+				font-weight: 600;
+	    	font-size: 25px;
+	    	img {
+	    		margin-right: 10px;
+	    	}
+			}
+			.close {
+		    border: none;
+		    background: transparent;
+		    top: 20px;
+		    right: 50px;
+		    font-size: 25px;
+		    opacity: 0.5;
+		    &:hover {
+		    	opacity: 1;
+		    }
+		    &:focus {
+		    	outline: none;
+		    }
+			}
+		}
+		.modal-body {
+			padding: 20px 0px;
+			font-size: 15px;
+			font-weight: 100;
+			line-height: 1.5;
 		}
 	}
 }
