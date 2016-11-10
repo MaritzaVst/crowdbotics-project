@@ -99,6 +99,7 @@ body {
 			color: white;
 			padding: 20px;
 			transition: all .2s ease-in-out;
+			overflow: hidden;
 			&:nth-child(2n-1) {
 				border-right: 1px solid white;
 			}
@@ -116,11 +117,30 @@ body {
 			}
 			p {
 				font-size: 12px;
-				font-weight: 100;
 			}
+			svg {
+				width: 170px;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    bottom: -78px;
+		    fill: white;
+		    path {
+		    	height: 130px;
+		    }
+			}
+			a {
+  			top: 0;
+  			bottom: 0;
+  			right: 0;
+  			left: 0;
+  			position: absolute;
+  		}
 			&:hover {
 				background-color: #ffffff;
 				color: #130377;
+				svg {
+		    	fill: #130377;
+		    }
 			}
 		}
 	}
