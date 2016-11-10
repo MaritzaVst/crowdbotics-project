@@ -1067,7 +1067,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -3420,8 +3420,30 @@ input[type="button"].btn-block {
 @media print {
   .hidden-print {
     display: none !important; } }
+.absolute {
+  position: absolute; }
+
+.fixed {
+  position: fixed; }
+
+.relative {
+  position: relative; }
+
+.absolute-center, .modal-dialog {
+  transform: translate(-50%, -50%) !important;
+  top: 50%;
+  left: 50%;
+  position: absolute; }
+
+.overlay, .box-right .cities li a {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute; }
+
 * {
-  font-family: "Lato"; }
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 body {
   background-color: #130377; }
@@ -3437,13 +3459,10 @@ body {
       padding-top: 10px; }
       .box-left .menu ul li {
         position: relative;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
         transition: all 0.5s ease; }
-        .box-left .menu ul li a {
-          top: 0;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          position: absolute; }
         .box-left .menu ul li:hover circle {
           fill: #ffffff; }
         .box-left .menu ul li:hover line, .box-left .menu ul li:hover path, .box-left .menu ul li:hover polyline {
@@ -3455,12 +3474,18 @@ body {
     color: white;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -70%);
+    -moz-transform: translate(-50%, -70%);
+    -ms-transform: translate(-50%, -70%);
     transform: translate(-50%, -70%);
     width: 500px;
     font-size: 40px;
     font-weight: bold;
     line-height: 1.4; }
     .box-left h1 span {
+      -webkit-transition: all .8s ease-in;
+      -moz-transition: all .8s ease-in;
+      -ms-transition: all .8s ease-in;
       transition: all .8s ease-in; }
       .box-left h1 span a {
         color: white; }
@@ -3470,6 +3495,9 @@ body {
   .box-left .icon {
     bottom: 10px;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%); }
 
 .box-right {
@@ -3500,6 +3528,9 @@ body {
       border-bottom: 2px solid white;
       color: white;
       padding: 20px;
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -ms-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out;
       overflow: hidden; }
       .box-right .cities li:nth-child(2n-1) {
@@ -3517,17 +3548,14 @@ body {
       .box-right .cities li svg {
         width: 170px;
         left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
         transform: translateX(-50%);
         bottom: -78px;
         fill: white; }
         .box-right .cities li svg path {
           height: 130px; }
-      .box-right .cities li a {
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        position: absolute; }
       .box-right .cities li:hover {
         background-color: #ffffff;
         color: #130377; }
@@ -3564,19 +3592,8 @@ body {
       font-weight: 100;
       line-height: 1.5; }
 
-.absolute {
-  position: absolute; }
-
-.fixed {
-  position: fixed; }
-
-.relative {
-  position: relative; }
-
-.absolute-center, .modal-dialog {
-  transform: translate(-50%, -50%) !important;
-  top: 50%;
-  left: 50%;
-  position: absolute; }
+.modal-sharing .modal-body svg {
+  width: 100px;
+  margin: 40px 20px 0px; }
 
 /*# sourceMappingURL=main.css.map */
