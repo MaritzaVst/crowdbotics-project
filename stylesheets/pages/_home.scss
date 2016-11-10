@@ -8,6 +8,7 @@
 .relative {
 	position: relative;
 }
+
 /**/
 
 * {
@@ -65,4 +66,62 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
+}
+.box-right {
+	padding: 0px;
+	overflow: auto;
+	height: 100vh;
+	form {
+		border-bottom: 2px solid #fff;
+		z-index: 1000;
+		background-color: #130377;
+		input {
+			height: 90px;
+			background-image: url("../images/lupa.svg");
+			background-color: transparent;
+			border: none;
+			background-repeat: no-repeat;
+			background-position: 15px 25px;
+			padding-left: 65px;
+			font-size: 15px;
+			font-weight: 100;
+			color: white;
+			&::-webkit-input-placeholder {
+			  color: #8880ba;
+			}
+		}
+	}
+	.cities {
+		margin: 90px 0 0 0;
+		li {
+			height: 300px;
+			border-bottom: 2px solid white;
+			color: white;
+			padding: 20px;
+			transition: all .2s ease-in-out;
+			&:nth-child(2n-1) {
+				border-right: 1px solid white;
+			}
+			&:nth-child(2n) {
+				border-left: 1px solid white;
+			}
+			&:nth-last-child(1),
+			&:nth-last-child(2) {
+				border-bottom: none;
+			}
+			h2 {
+				font-size: 25px;
+				font-weight: bold;
+				padding-bottom: 7px;
+			}
+			p {
+				font-size: 12px;
+				font-weight: 100;
+			}
+			&:hover {
+				background-color: #ffffff;
+				color: #130377;
+			}
+		}
+	}
 }

@@ -3682,4 +3682,50 @@ body {
     left: 50%;
     transform: translateX(-50%); }
 
+.box-right {
+  padding: 0px;
+  overflow: auto;
+  height: 100vh; }
+  .box-right form {
+    border-bottom: 2px solid #fff;
+    z-index: 1000;
+    background-color: #130377; }
+    .box-right form input {
+      height: 90px;
+      background-image: url("../images/lupa.svg");
+      background-color: transparent;
+      border: none;
+      background-repeat: no-repeat;
+      background-position: 15px 25px;
+      padding-left: 65px;
+      font-size: 15px;
+      font-weight: 100;
+      color: white; }
+      .box-right form input::-webkit-input-placeholder {
+        color: #8880ba; }
+  .box-right .cities {
+    margin: 90px 0 0 0; }
+    .box-right .cities li {
+      height: 300px;
+      border-bottom: 2px solid white;
+      color: white;
+      padding: 20px;
+      transition: all .2s ease-in-out; }
+      .box-right .cities li:nth-child(2n-1) {
+        border-right: 1px solid white; }
+      .box-right .cities li:nth-child(2n) {
+        border-left: 1px solid white; }
+      .box-right .cities li:nth-last-child(1), .box-right .cities li:nth-last-child(2) {
+        border-bottom: none; }
+      .box-right .cities li h2 {
+        font-size: 25px;
+        font-weight: bold;
+        padding-bottom: 7px; }
+      .box-right .cities li p {
+        font-size: 12px;
+        font-weight: 100; }
+      .box-right .cities li:hover {
+        background-color: #ffffff;
+        color: #130377; }
+
 /*# sourceMappingURL=main.css.map */
